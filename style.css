@@ -1,0 +1,102 @@
+body {
+  font-family: sans;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+h1, form, #help {
+  display: inline;
+  padding: 0 2em;
+}
+#help a {
+  background-color: #888;
+  font-weight: bold;
+  color: white;
+  padding: 2px;
+  box-shadow: 0 0 5px 5px #888;
+}
+#cal {
+  display: grid;
+  grid-template-columns: 3em repeat(31, 1fr);
+  margin: 1em 10ex;
+}
+.date {
+  padding: 0.5ex;
+  padding-bottom: 2em;
+  border-bottom: solid thin #eaf;
+  border-top: solid thin #eaf;
+}
+.start {
+  border-left: solid thin #eaf;
+}
+.weekend {
+  color: #ccc;
+}
+.vacances {
+  background-color: #f5f5f5;
+}
+.month {
+  padding-top: 0.5ex;
+  color: gray;
+}
+.stars {
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 150%;
+  background-color: #eaeaff;
+  padding: 0 1ex;
+  cursor: pointer;
+}
+.stars:hover {
+  background-color: #ddf;
+}
+.star {
+  color: white;
+}
+.star:hover,
+.star:hover ~ .star,
+.stars:not(:hover) .star.selected,
+.stars:not(:hover) .star.selected ~ .star {
+  color: gold;
+}
+.vote {
+  position: relative;
+  width: 700%;
+  cursor: help;
+}
+.bar {
+  height: 6px;
+  width: 0;
+  background-color: #00a;
+}
+
+.legend {
+  margin: 0 2em;
+  font-size: smaller;
+  padding: 2px;
+  box-shadow: 0 0 2px 2px #aaa;
+}
+.legend li {
+  display: inline-block;
+  margin: 0 1ex;
+  padding: 1ex;
+}
+.legend .stars {
+  display: flex;
+  width: 20em;
+  position: inherit;
+  padding: 0;
+  margin: 2px 0;
+  font-size: 120%;
+}
+.legend .comment {
+  margin: 2px;
+  width: 20em;
+}
