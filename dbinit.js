@@ -16,4 +16,6 @@ const dates = require('./dates');
     for (let d of dates.dates)
       table.enum(d.toISOString().substr(0,10), [1,2,3]).defaultTo(2);
   });
+
+  process.exit();
 })();
