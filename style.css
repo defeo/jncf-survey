@@ -14,12 +14,17 @@ h1, form, #help {
   display: inline;
   padding: 0 2em;
 }
-#help a {
+#help a, #show {
   background-color: #888;
   font-weight: bold;
   color: white;
   padding: 2px;
   box-shadow: 0 0 5px 5px #888;
+  cursor: pointer;
+}
+#results:checked ~ #show {
+    background-color: #88f;
+    box-shadow: 0 0 5px 5px #88f;
 }
 #cal {
   display: grid;
@@ -75,6 +80,10 @@ h1, form, #help {
   height: 6px;
   width: 0;
   background-color: #00a;
+  visibility: hidden;
+}
+#results:checked ~ #cal .bar {
+  visibility: visible;
 }
 
 .legend {
