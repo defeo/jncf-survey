@@ -29,7 +29,7 @@ $('form').addEventListener('submit', function(e) {
   });
   
   var xhr = new XMLHttpRequest();
-  xhr.open('POST', '/vote');
+  xhr.open('POST', 'vote');
   xhr.responseType = 'json';
   xhr.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
   xhr.send(JSON.stringify(vote));
@@ -56,7 +56,7 @@ $('form').addEventListener('submit', function(e) {
 (function getMe() {
   if (localStorage.name && localStorage.seed && localStorage.hmac) {
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', '/me?name=' + localStorage.name);
+    xhr.open('GET', 'me?name=' + localStorage.name);
     xhr.responseType = 'json';
     xhr.send()
     xhr.onload = function() {
@@ -81,7 +81,7 @@ $('form').addEventListener('submit', function(e) {
 
 function getVotes() {
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', '/totals');
+  xhr.open('GET', 'totals');
   xhr.responseType = 'json';
   xhr.send()
   xhr.onload = function() {
